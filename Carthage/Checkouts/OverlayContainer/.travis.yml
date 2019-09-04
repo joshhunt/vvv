@@ -1,0 +1,37 @@
+os: osx
+osx_image: xcode10.2
+language: swift
+
+branches:
+  only:
+    - master
+cache:
+  - bundler
+podfile: Example/Podfile
+
+env:
+  global:
+  - LANG=en_US.UTF-8
+  - LC_ALL=en_US.UTF-8
+  - DESTINATION="OS=12.2,name=iPhone XS"
+  - SCHEME="OverlayContainer"
+  - WORKSPACE="OverlayContainer.xcworkspace"
+skip_cleanup: true
+
+jobs:
+  include:
+
+  - stage: podspec
+    script:
+    - pod spec lint
+
+  - stage: Build
+    script:
+    - set -o pipefail && xcodebuild -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO | xcpretty
+
+  - stage: Tests
+    script:
+    - brew update
+    - brew outdated carthage || brew upgrade carthage
+    - carthage update
+    - set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO | xcpretty

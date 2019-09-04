@@ -12,6 +12,12 @@
 		80B499ED231932A800FEC958 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B499EB231932A800FEC958 /* Main.storyboard */; };
 		80B499EF231932AB00FEC958 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80B499EE231932AB00FEC958 /* Assets.xcassets */; };
 		80B499F2231932AB00FEC958 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B499F0231932AB00FEC958 /* LaunchScreen.storyboard */; };
+		80B499FB231935F200FEC958 /* OverlayContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B499FA231935F200FEC958 /* OverlayContainer.framework */; };
+		80FD767023194DD400BB78DF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FD766E23194DD400BB78DF /* MainViewController.swift */; };
+		80FD767123194DD400BB78DF /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80FD766F23194DD400BB78DF /* MainViewController.xib */; };
+		80FD767423194E4A00BB78DF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FD767223194E4A00BB78DF /* SearchViewController.swift */; };
+		80FD767523194E4A00BB78DF /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80FD767323194E4A00BB78DF /* SearchViewController.xib */; };
+		80FD767723194EF600BB78DF /* OverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FD767623194EF600BB78DF /* OverlayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		80B499EE231932AB00FEC958 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80B499F1231932AB00FEC958 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80B499F3231932AB00FEC958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80B499FA231935F200FEC958 /* OverlayContainer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OverlayContainer.framework; path = Carthage/Build/iOS/OverlayContainer.framework; sourceTree = "<group>"; };
+		80FD766E23194DD400BB78DF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		80FD766F23194DD400BB78DF /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		80FD767223194E4A00BB78DF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		80FD767323194E4A00BB78DF /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		80FD767623194EF600BB78DF /* OverlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B499FB231935F200FEC958 /* OverlayContainer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,7 @@
 			children = (
 				80B499E6231932A800FEC958 /* gg */,
 				80B499E5231932A800FEC958 /* Products */,
+				80B499FA231935F200FEC958 /* OverlayContainer.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,8 +69,13 @@
 			isa = PBXGroup;
 			children = (
 				80B499E7231932A800FEC958 /* AppDelegate.swift */,
+				80FD767623194EF600BB78DF /* OverlayViewController.swift */,
 				80B499E9231932A800FEC958 /* ViewController.swift */,
+				80FD766E23194DD400BB78DF /* MainViewController.swift */,
+				80FD766F23194DD400BB78DF /* MainViewController.xib */,
 				80B499EB231932A800FEC958 /* Main.storyboard */,
+				80FD767223194E4A00BB78DF /* SearchViewController.swift */,
+				80FD767323194E4A00BB78DF /* SearchViewController.xib */,
 				80B499EE231932AB00FEC958 /* Assets.xcassets */,
 				80B499F0231932AB00FEC958 /* LaunchScreen.storyboard */,
 				80B499F3231932AB00FEC958 /* Info.plist */,
@@ -74,6 +93,7 @@
 				80B499E0231932A800FEC958 /* Sources */,
 				80B499E1231932A800FEC958 /* Frameworks */,
 				80B499E2231932A800FEC958 /* Resources */,
+				80B499F9231935AD00FEC958 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -125,17 +145,44 @@
 				80B499F2231932AB00FEC958 /* LaunchScreen.storyboard in Resources */,
 				80B499EF231932AB00FEC958 /* Assets.xcassets in Resources */,
 				80B499ED231932A800FEC958 /* Main.storyboard in Resources */,
+				80FD767523194E4A00BB78DF /* SearchViewController.xib in Resources */,
+				80FD767123194DD400BB78DF /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		80B499F9231935AD00FEC958 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/OverlayContainer.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/OverlayContainer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		80B499E0231932A800FEC958 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80FD767023194DD400BB78DF /* MainViewController.swift in Sources */,
 				80B499EA231932A800FEC958 /* ViewController.swift in Sources */,
+				80FD767723194EF600BB78DF /* OverlayViewController.swift in Sources */,
+				80FD767423194E4A00BB78DF /* SearchViewController.swift in Sources */,
 				80B499E8231932A800FEC958 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +330,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = gg/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +351,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = gg/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
