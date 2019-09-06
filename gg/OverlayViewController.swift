@@ -24,7 +24,7 @@ class OverlayViewController: UIViewController {
             searchController
         ]
         
-//        window?.rootViewController = containerController
+//        containerController.drivingScrollView = searchController.table
     }
     
 
@@ -44,12 +44,17 @@ extension OverlayViewController: OverlayContainerViewControllerDelegate {
                                         heightForNotchAt index: Int,
                                         availableSpace: CGFloat) -> CGFloat {
         switch OverlayNotch.allCases[index] {
-        case .maximum:
-            return availableSpace * 0.9
-        case .medium:
-            return availableSpace / 2
-        case .minimum:
-            return availableSpace * 0.1
+            case .maximum:
+                return availableSpace * 0.9
+            case .medium:
+                return availableSpace / 2
+            case .minimum:
+                return 1
         }
+    }
+    
+    func overlayContainerViewController(_ containerViewController: OverlayContainerViewController,
+                                        scrollViewDrivingOverlay overlayViewController: UIViewController) -> UIScrollView? {
+        return (overlayViewController as? SearchViewController)?.table
     }
 }

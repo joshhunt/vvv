@@ -12,8 +12,8 @@
   "iOS" : [
     {
       "name" : "OverlayContainer",
-      "hash" : "895ce6c1c41ea552f6aab509cd2098e2a52feca221dd2502b583d75b044e81df",
-      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.43.3 clang-1100.0.26.3)"
+      "hash" : "c825cff83ce37ad0ebf109cbf7f9fde458e3f6539de1c99b161a4f934fd765bf",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
     }
   ]
 }

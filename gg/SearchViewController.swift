@@ -8,8 +8,11 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
-
+class SearchViewController: UIViewController,
+    UITableViewDataSource,
+    UITableViewDelegate {
+    @IBOutlet public var table: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,35 +32,30 @@ class SearchViewController: UIViewController {
             blurView.widthAnchor.constraint(equalTo: view.widthAnchor),
         ])
         
-        // Then the vibrancy effect
-//        let vibrancyEffect = UIVibrancyEffect(blurEffect: blurEffect)
-//        let vibrancyView = UIVisualEffectView(effect: vibrancyEffect)
-//        vibrancyView.translatesAutoresizingMaskIntoConstraints = false
-//        vibrancyView.contentView.addSubview(actualSearchView)
-//        blurView.contentView.addSubview(vibrancyView)
+        table.backgroundColor = .clear
         
-//        NSLayoutConstraint.activate([
-//            vibrancyView.heightAnchor.constraint(equalTo: blurView.contentView.heightAnchor),
-//            vibrancyView.widthAnchor.constraint(equalTo: blurView.contentView.widthAnchor),
-//            vibrancyView.centerXAnchor.constraint(equalTo: blurView.contentView.centerXAnchor),
-//            vibrancyView.centerYAnchor.constraint(equalTo: blurView.contentView.centerYAnchor)
-//        ])
-        
-//        NSLayoutConstraint.activate([
-//            optionsView.centerXAnchor.constraint(equalTo: vibrancyView.contentView.centerXAnchor),
-//            optionsView.centerYAnchor.constraint(equalTo: vibrancyView.contentView.centerYAnchor),
-//        ])
+        // Table view shit
+        table.dataSource = self
+        table.delegate = self
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - UITableViewDataSource
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell(style: .default, reuseIdentifier: "cell")
+        cell.textLabel?.text = "Row \(indexPath.row)"
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+        return cell
     }
-    */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        delegate?.searchViewControllerDidSelectARow(self)
+    }
 
 }
