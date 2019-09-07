@@ -17,14 +17,14 @@ class OverlayViewController: UIViewController {
         let mapsController = MainViewController()
         let searchController = SearchViewController()
         
-        let containerController = OverlayContainerViewController()
+        let containerController = OverlayContainerViewController(style: .flexibleHeight)
         containerController.delegate = self
         containerController.viewControllers = [
             mapsController,
             searchController
         ]
         
-//        containerController.drivingScrollView = searchController.table
+        containerController.drivingScrollView = searchController.table
     }
     
 

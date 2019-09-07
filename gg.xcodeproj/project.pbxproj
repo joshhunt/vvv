@@ -13,6 +13,7 @@
 		80B499EF231932AB00FEC958 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80B499EE231932AB00FEC958 /* Assets.xcassets */; };
 		80B499F2231932AB00FEC958 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80B499F0231932AB00FEC958 /* LaunchScreen.storyboard */; };
 		80B499FB231935F200FEC958 /* OverlayContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B499FA231935F200FEC958 /* OverlayContainer.framework */; };
+		80B56124232321AA001B7FC8 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80B56123232321AA001B7FC8 /* SDWebImage.framework */; };
 		80FD767023194DD400BB78DF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FD766E23194DD400BB78DF /* MainViewController.swift */; };
 		80FD767123194DD400BB78DF /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80FD766F23194DD400BB78DF /* MainViewController.xib */; };
 		80FD767423194E4A00BB78DF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FD767223194E4A00BB78DF /* SearchViewController.swift */; };
@@ -29,6 +30,7 @@
 		80B499F1231932AB00FEC958 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80B499F3231932AB00FEC958 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80B499FA231935F200FEC958 /* OverlayContainer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OverlayContainer.framework; path = Carthage/Build/iOS/OverlayContainer.framework; sourceTree = "<group>"; };
+		80B56123232321AA001B7FC8 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		80FD766E23194DD400BB78DF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		80FD766F23194DD400BB78DF /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		80FD767223194E4A00BB78DF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80B56124232321AA001B7FC8 /* SDWebImage.framework in Frameworks */,
 				80B499FB231935F200FEC958 /* OverlayContainer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +56,7 @@
 			children = (
 				80B499E6231932A800FEC958 /* gg */,
 				80B499E5231932A800FEC958 /* Products */,
+				80B56123232321AA001B7FC8 /* SDWebImage.framework */,
 				80B499FA231935F200FEC958 /* OverlayContainer.framework */,
 			);
 			sourceTree = "<group>";
@@ -162,11 +166,13 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/OverlayContainer.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/OverlayContainer.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
